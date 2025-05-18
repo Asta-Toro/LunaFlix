@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - LunaFlix</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #0a0a1a;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .top-section {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .video-box {
+      flex: 2;
+      position: relative;
+      padding-top: 56.25%; 
+    }
+
+    .video-box iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .description-box {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .description-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .separator {
+      width: 1px;
+      background-color: #ddd;
+      margin: 0 20px;
+    }
+
+    .more-like-this {
+      margin-top: 10px;
+    }
+
+    .more-like-this h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .movie-card {
+        background-color: #1a1a3d;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .movie-card p {
+      margin: 8px 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="D:\websites for assignment\LunaFlix\assets\logo.jpeg" alt="MovieNet Logo" class="logo">
+            <span class="site-title">LunaFlix</span>
+        </div>
+        <nav>
+            <ul>
+              <li><a href="D:\websites for assignment\LunaFlix\index.html">Home</a></li>
+                <li><a href="D:\websites for assignment\LunaFlix\about.html">About Us</a></li>
+                <li class="genre-dropdown">
+                    <a href="#">Genre</a>
+                    <div class="dropdown-menu">
+                        <a href="#">Action</a>
+                        <a href="#">Comedy</a>
+                        <a href="#">Drama</a>
+                        <a href="#">Sci-Fi</a>
+                        <a href="#">Horror</a>
+                        <a href="#">Romance</a>
+                    </div>
+                </li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li class="search-item">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search movies...">
+                    </div>
+                </li>
+                <li><a href="D:\websites for assignment\LunaFlix\login.html">Login</a></li>
+                <li><a href="D:\websites for assignment\LunaFlix\signup.html" class="signup-btn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+  <div class="container">
+
+    <div class="top-section">
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      </div>
+
+
+      <div class="separator"></div>
+
+      <div class="description-box">
+        <img src="Movies pic/Dune.jpg" alt="Movie Poster">
+        <h1>Dune</h1>
+        <p><strong>Genre:</strong> Action, Adventure, Sci-Fi</p>
+        <p><strong>Release Year:</strong> 2021</p>
+        <p><strong>Description:</strong> Paul Atreides arrives on Arrakis after his father accepts the stewardship of the dangerous planet. However, chaos ensues after a betrayal as forces clash to control melange, a precious resource.</p>
+      </div>
+    </div>
+
+
+    <div class="more-like-this">
+      <h2>More Like This</h2>
+      <div class="movie-grid">
+        <div class="movie-card">
+          <img src="Movies pic/The Batman.jpg" alt="Movie 1">
+          <p>The Batman</p>
+        </div>
+        <div class="movie-card">
+          <img src="Movies pic/Avatar.jpg" alt="Movie 2">
+          <p>Avatar</p>
+        </div>
+        <div class="movie-card">
+          <img src="Movies pic/The Dark Horizon.jpg" alt="Movie 3">
+          <p>The Dark Horizon</p>
+        </div>
+        <div class="movie-card">
+          <img src="Movies pic/Tenet.jpg" alt="Movie 4">
+          <p>Tenet</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
